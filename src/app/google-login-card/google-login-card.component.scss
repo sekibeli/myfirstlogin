@@ -1,0 +1,28 @@
+.google-card-container {
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(96, 96, 96);
+    display: flex;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+gap: 20px;
+cursor: pointer;
+
+&:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+    img {
+       
+        width: 30px;
+        object-fit: contain;
+    }
+
+    p {
+        margin: 0;
+    }
+}

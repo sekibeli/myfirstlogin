@@ -1,0 +1,39 @@
+.login-container {
+    width: 100%;
+   height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;;
+
+    .title {
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .login-content {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+.google-card {
+    width: 40%;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.alternative {
+    span{ cursor: pointer;
+       color: darkcyan;
+    }
+   
+}
+.bold {
+    font-weight: 700;
+}
+
+.forgot-label {
+    color: darkcyan;
+    
+}

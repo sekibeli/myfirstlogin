@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "jg-myfirstlogin": {
+      "hosting": {
+        "login": [
+          "jg-myfirstlogin"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "jg-myfirstlogin"
+  }
+}

@@ -1,0 +1,46 @@
+<div class="register-container">
+    <div [formGroup]="registrationForm" class="register-content">
+        <p class=" title">Sign up</p>
+<p>Welcome to Sign up!</p>
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input formControlName="username" matInput type="text">
+            <mat-error *ngIf="registrationForm.controls['username'].hasError('required')">Username is required</mat-error>
+            <mat-error *ngIf="registrationForm.controls['username'].hasError('email')">Invalid email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input formControlName="phoneNumber" matInput type="text">
+            <mat-error *ngIf="registrationForm.controls['phoneNumber'].hasError('required')">Phone Number is required</mat-error>
+           
+        </mat-form-field>
+       
+       
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+            <mat-icon (click)="hide = !hide" matSuffix>{{hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+            <mat-error *ngIf="registrationForm.controls['password'].hasError('required')">Password is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Confirm Password</mat-label>
+            <input formControlName="confirmPassword" matInput [type]="hideConfirmPassword ? 'password' : 'text'">
+            <mat-icon (click)="hideConfirmPassword = !hideConfirmPassword" matSuffix>{{hideConfirmPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+            <mat-error *ngIf="registrationForm.controls['confirmPassword'].hasError('required')">Confirm Password</mat-error>
+        </mat-form-field>
+
+        
+        <p class="alternative">Don't have an account? <span routerLink="/login">Login</span></p>
+        <button  (click)="registerWithEmailAndPassword()" [disabled]="registrationForm.invalid || registrationForm.get('password')?.value != registrationForm.get('confirmPassword')?.value" class="btn btnFill">Register</button>
+    </div>
+    <div class="google-card">
+        <app-google-login-card></app-google-login-card>
+    </div>
+</div> 
+
+
+
+<!-- <a target="_blank" href="https://icons8.com/icon/V5cGWnc9R4xj/google-logo">Google Logo</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+
